@@ -1,0 +1,61 @@
+.header {
+  color: white;
+  width: 100%;
+  padding: 16px 0;
+  @include pad {
+    padding: 12px 0;
+  }
+
+  @include mobile-larger {
+    padding-bottom: 0;
+  }
+
+  .logo {
+    width: 80px;
+    height: 48.57px;
+    margin-bottom: 15.43px;
+    @include mobile-larger {
+      margin-left: 15px;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile-larger {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .nav {
+    font-size: 20px;
+    display: flex;
+    @include mobile-larger {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    &-item {
+      @include mobile-larger {
+        font-size: 16px;
+        width: 50%;
+        border: solid 1px white;
+        text-align: center;
+      }
+    }
+    &-item a {
+      padding: 8px 32px;
+      @include mobile-larger {
+        padding: 12px 0;
+      }
+    }
+  }
+}
+
+@include mobile-larger {
+  .px-sm-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
